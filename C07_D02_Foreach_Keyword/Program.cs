@@ -12,8 +12,6 @@ familyMembers[2] = "Joke";   // Mom
 familyMembers[3] = "Jan";    // Dad
 familyMembers[4] = "Sirus";  // Dog
 
-string lastName = "Lindenhof";
-
 // ┌ foreach keyword
 // │     ┌ Type of the elements in the array
 // │     │      ┌ Variable name that we store the value from the array in
@@ -21,6 +19,5 @@ string lastName = "Lindenhof";
 // │     │      │         │  ┌ Array that we want to loop over
 foreach (string firstName in familyMembers)
 {
-    string fullName = firstName + " " + lastName;
-    Console.WriteLine($"- {fullName}");
+    Console.WriteLine($"- {firstName} Lindenhof");
 }

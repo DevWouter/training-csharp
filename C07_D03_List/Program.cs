@@ -6,6 +6,12 @@
 // │         │             ┌ Assign operator
 // │         │             │ ┌ Creating an new list
 List<string> familyMembers = new List<string>();
+
+// ┌ variable (of type `List<string>`) 
+// │          ┌ Add function
+// │          │  ┌ Start of the argument list
+// │          │  │┌ String literal
+// │          │  ││       ┌ End of the argument list
 familyMembers.Add("Wouter"); // Me!
 familyMembers.Add("Rutger"); // My brother
 familyMembers.Add("Joke");   // Mom
@@ -16,10 +22,9 @@ while(true)
 {
     Console.Write("Please enter the name of our new family member: ");
     string newFamilyMember = Console.ReadLine();
-    if(newFamilyMember == "")
-        break;     // NOTE: We are using break to exit a while loop
+    if(newFamilyMember == "") break; // NOTE: We are using break to exit a while loop
 
-    // Adding more elements to the list
+    // Adding the new family member to the list.
     familyMembers.Add(newFamilyMember);
 }
 
