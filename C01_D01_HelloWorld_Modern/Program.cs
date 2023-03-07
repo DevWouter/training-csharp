@@ -1,4 +1,11 @@
-﻿// This is the same as the previous example, but without the program around it.
+﻿// Lines starting with "//" are comments and are ignored by the compiler.
+// The compiler only cares about the code that is not commented out.
+
+/* A multi-line comment can also be used.
+   This is useful for large comments that span multiple lines.
+   That way you don't have to write "//" at the beginning of each line.
+   You can also put the multi-line halfway through a line.
+*/
 
 // ┌ Type "Console" (also a static class)
 // │   ┌ The "." indicates that we are operating a method on the object

@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C01 - Statements", "C01 - S
 		C01.md = C01.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C01_D01_HelloWorld_Classic", "C01_D01_HelloWorld_Classic\C01_D01_HelloWorld_Classic.csproj", "{83D5B0F2-5528-4336-BA32-D627F96D68E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C01_D02_HelloWorld_Classic", "C01_D02_HelloWorld_Classic\C01_D02_HelloWorld_Classic.csproj", "{83D5B0F2-5528-4336-BA32-D627F96D68E4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C02 - Variables and Literals", "C02 - Variables and Literals", "{7FA2A9B0-3C66-43A5-9FCE-12E3F343AF94}"
 	ProjectSection(SolutionItems) = preProject
@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C02_D02_Multiple_Variables"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C02_D03_Ask_For_Name", "C02_D03_Ask_For_Name\C02_D03_Ask_For_Name.csproj", "{D120F6B9-0C16-4BD1-9EBB-75ACC099716D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C01_D02_HelloWorld_Modern", "C01_D02_HelloWorld_Modern\C01_D02_HelloWorld_Modern.csproj", "{345C534F-2EB4-4DAA-BC73-A60FA092095D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C01_D01_HelloWorld_Modern", "C01_D01_HelloWorld_Modern\C01_D01_HelloWorld_Modern.csproj", "{345C534F-2EB4-4DAA-BC73-A60FA092095D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C02_L01S_Ask_For_Name_And_Greeting", "C02_L01S_Ask_For_Name_And_Greeting\C02_L01S_Ask_For_Name_And_Greeting.csproj", "{EE3CBD93-31B8-4014-AB70-8E83766D14D8}"
 EndProject
