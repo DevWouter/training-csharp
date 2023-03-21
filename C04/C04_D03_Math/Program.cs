@@ -72,10 +72,11 @@ Console.WriteLine($"value /= 3;  value is {value}");
 
 // Mostly the same as integer math.
 Header("Floating point math");
-Console.WriteLine($"integer: 10f / 3f = {10 / 3}");
-Console.WriteLine($"float:   10f / 3f = {10f / 3f}");
-Console.WriteLine($"double:  10d / 3d = {10d / 3d}");
-Console.WriteLine($"decimal: 10f / 3m = {10m / 3m}");
+Console.WriteLine($"integer: 10  / 3  = {10 / 3}");
+Console.WriteLine($"integer: 11  / 3  = {11 / 3}");
+Console.WriteLine($"float:   11f / 3f = {11f / 3f}");
+Console.WriteLine($"double:  11d / 3d = {11d / 3d}");
+Console.WriteLine($"decimal: 11f / 3m = {11m / 3m}");
 
 // Special values (these also exist for double and decimal and some also exist for integer types)
 Header("Special values");
