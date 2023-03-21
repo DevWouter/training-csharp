@@ -1,0 +1,142 @@
+﻿# TODO
+
+This file contains a checklist of code samples.
+
+- [ ] **Variables and literals**
+  - [x] Explain `int`
+  - [x] Explain `double`
+  - [x] Explain `float`
+  - [x] Explain `decimal`
+  - [x] Explain `bool`
+  - [x] Explain `string`
+  - [x] Explain `enum`
+  - [x] Explain Math
+  - [ ] Explain `char`
+  - [ ] Explain `null`
+  - [ ] Explain `var`
+  - [ ] Explain `DateTime`
+  - [ ] Explain `TimeSpan`
+  - [ ] Explain `Guid`
+- [ ] **Methods**
+  - [x] Explain `static` (done in OOP)
+  - [x] Explain `ref` parameters (done in OOP)
+  - [x] Explain `in` parameters (without the `in` keyword)
+  - [ ] Explain `params` parameters
+  - [ ] Explain Method overloading
+- [ ] **Branching**
+  - [x] Explain `if` and `else`
+  - [x] Explain `switch`
+  - [x] Explain `while` and `do`
+  - [x] Explain `for`
+  - [x] Explain `foreach`
+  - [x] Explain `break` and `continue`
+  - [ ] Explain `goto`
+- [ ] **File IO**
+  - ???
+- [ ] **Collection**
+  - [x] Explain `Array<T>`
+  - [x] Explain `List<T>`
+  - [x] Explain `HashSet<T>`
+  - [x] Explain `Dictionary<TKey, TValue>`
+  - [x] Explain `IEnumerable<T>`
+  - [x] Explain `yield return`
+  - [x] Explain `yield break`
+- [ ] **Namespaces**
+  - [ ] Explain `using namespace`
+  - [ ] Explain `namespace`
+- [ ] **Exceptions** (basics)
+  - [x] Explain `try`
+  - [x] Explain `catch`
+  - [x] Explain `finally`
+  - [x] Explain `throw`
+  - [ ] Explain rethrow
+  - [x] Explain exception filters
+- [ ] **OOP**
+  - [x] Explain `struct`
+  - [x] Explain `class`
+  - [x] Explain field
+  - [x] Explain propety (get-only, set-only, get and set)
+  - [x] Explain auto-property
+  - [x] Explain `ref` property
+  - [x] Explain member methods
+  - [x] Explain constructor
+  - [x] Explain multiple constructors
+  - [x] Explain `partial`
+  - [x] Explain Finalizer
+  - [x] Explain indexers
+  - [x] Explain static members
+  - [x] Explain operators 
+- [ ] **Inheritance and polymorphism**
+  - [x] Explain `base`
+  - [x] Explain inhertiance
+  - [x] Explain `interface`
+  - [x] Explain boxing and unboxing
+  - [x] Explain `as` and `is`
+  - [x] Explain casting
+- [ ] **Generics**
+  - ???
+- [ ] **Async/Await**
+  - ???
+- [ ] **Delegates**
+  - ???
+- [ ] **LINQ**
+  - ???
+- [ ] **Attributes**
+  - ???
+- [ ] **Dlls, packages, nuget**
+  - ???
+
+## Skills
+
+- [ ] **Debugging**
+  - ??? 
+- [ ] **UnitTesting**
+  - ???
+
+## Currently out of scope
+- Keywords
+  - [ ] Explain `readonly`
+  - [ ] Explain `init`
+  - [ ] Explain `required`
+  - [ ] Explain `const`
+  - [ ] Explain `record`
+  - [ ] Explain `dynamic`
+  - [ ] Explain `var`
+  - [ ] Explain `abstract`
+  - [ ] Explain `sealed`
+  - [ ] Explain `virtual`
+  - [ ] Explain `override` (in combination with `virtual`)
+  - [ ] Explain `new` (in combination with `override`)
+  - [ ] Explain `out` parameters
+- [ ] Explain threading
+  - [ ] Explain `Thread`
+- [ ] Explain synchronization
+  - [ ] Explain `lock`
+  - [ ] Explain `Monitor`
+  - [ ] Explain `Interlocked`
+  - [ ] Explain `Semaphore`
+  - [ ] Explain `Mutex`
+  - [ ] Explain `SpinLock`
+  - [ ] Explain `ReaderWriterLock`
+  - [ ] Explain `AutoResetEvent`
+  - [ ] Explain `ManualResetEvent`
+  - [ ] Explain `CountdownEvent`
+  - [ ] Explain `Barrier`
+- [ ] Explain `async` and `await`
+  - [ ] Explain `Task`
+  - [ ] Explain `Task<T>`
+  - [ ] Explain `Task.Run`
+  - [ ] Explain `Task.WhenAll`
+  - [ ] Explain `Task.WhenAny`
+  - [ ] Explain `Task.Delay`
+- [ ] Explain Creating own exceptions
+- [ ] Explain `IDisposable`
+  - [ ] Explain `using var xyz` statement
+- [ ] Explain `IComparable` and `IComparer`
+- [ ] Explain `IEnumerable` and `IEnumerator`
+- [ ] Explain `IConvertible`
+- [ ] Explain `IList` and `ICollection`
+- [ ] Explain `IFormattable`
+- [ ] Explain `IFormatProvider`
+- [ ] Explain `IFormatProvider` and `IFormattable`
+- [ ] Explain `System.IO`
