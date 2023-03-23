@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Chapter 2</title>
+
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Chapter 2</h1>
+        <h2>Variables and Literals</h2>
+      </section>
+      <section>
+        <h2>Overview Chapter 02</h2>
+        <ul>
+          <li>Hello world in detail</li>
+          <li>Using a variable</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <section data-transition="none">
+          <h3>Hello world</h3>
+          <pre><code data-trim class="hljs language-csharp">
+            // ┌ Type "Console" (also a static class)
+            // │
+            // │
+            // │
+            // │
+            // │
+            // │
+            // │
+            // │
+            // │
+            // │
+            Console.WriteLine("Hello, world");
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Hello world</h3>
+          <pre><code data-trim class="hljs language-csharp">
+            // ┌ Type "Console" (also a static class)
+            // │   ┌ The "." indicates that we are invoking a method
+            // │   │ of that type ("Console")
+            // │   │
+            // │   │
+            // │   │
+            // │   │
+            // │   │
+            // │   │
+            // │   │ 
+            // │   │
+            Console.WriteLine("Hello, world");
+          </code></pre>
+        </section>
+        <section  data-transition="none">
+          <h3>Hello world</h3>
+          <pre><code data-trim class="hljs language-csharp">
+            // ┌ Type "Console" (also a static class)
+            // │   ┌ The "." indicates that we are invoking a method
+            // │   │ of that type ("Console")
+            // │   │ ┌ Method "WriteLine"
+            // │   │ │
+            // │   │ │
+            // │   │ │
+            // │   │ │
+            // │   │ │
+            // │   │ │
+            // │   │ │
+            Console.WriteLine("Hello, world");
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Hello world</h3>
+          <pre><code data-trim class="hljs language-csharp">
+            // ┌ Type "Console" (also a static class)
+            // │   ┌ The "." indicates that we are invoking a method
+            // │   │ of that type ("Console")
+            // │   │ ┌ Method "WriteLine"
+            // │   │ │       ┌ Opening parenthesis indicates that we 
+            // │   │ │       │ are invoking the method and passing
+            // │   │ │       │ arguments
+            // │   │ │       │ 
+            // │   │ │       │ 
+            // │   │ │       │ 
+            // │   │ │       │ 
+            Console.WriteLine("Hello, world");
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Hello world</h3>
+          <pre><code data-trim class="hljs language-csharp">
+            // ┌ Type "Console" (also a static class)
+            // │   ┌ The "." indicates that we are invoking a method
+            // │   │ of that type ("Console")
+            // │   │ ┌ Method "WriteLine"
+            // │   │ │       ┌ Opening parenthesis indicates that we 
+            // │   │ │       │ are invoking the method and passing
+            // │   │ │       │ arguments
+            // │   │ │       │ ┌ Argument (a string literal)
+            // │   │ │       │ │            
+            // │   │ │       │ │            
+            // │   │ │       │ │            
+            Console.WriteLine("Hello, world");
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Hello world</h3>
+          <pre><code data-trim class="hljs language-csharp">
+          // ┌ Type "Console" (also a static class)
+          // │   ┌ The "." indicates that we are invoking a method
+          // │   │ of that type ("Console")
+          // │   │ ┌ Method "WriteLine"
+          // │   │ │       ┌ Opening parenthesis indicates that we 
+          // │   │ │       │ are invoking the method and passing
+          // │   │ │       │ arguments
+          // │   │ │       │ ┌ Argument (a string literal)
+          // │   │ │       │ │            ┌ End of the argument list
+          // │   │ │       │ │            │
+          // │   │ │       │ │            │
+          Console.WriteLine("Hello, world");
+        </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Hello world</h3>
+          <pre><code data-trim class="hljs language-csharp">
+        // ┌ Type "Console" (also a static class)
+        // │   ┌ The "." indicates that we are invoking a method
+        // │   │ of that type ("Console")
+        // │   │ ┌ Method "WriteLine"
+        // │   │ │       ┌ Opening parenthesis indicates that we 
+        // │   │ │       │ are invoking the method and passing
+        // │   │ │       │ arguments
+        // │   │ │       │ ┌ Argument (a string literal)
+        // │   │ │       │ │            ┌ End of the argument list
+        // │   │ │       │ │            │┌ Terminating the statement 
+        // │   │ │       │ │            ││ using a semicolon
+        Console.WriteLine("Hello, world");
+      </code></pre>
+        </section>
+      </section>
+
+      <section>
+        <h2>Literal and variables</h2>
+        <ul>
+          <li>A literal is a value that is written directly into the source code.</li>
+          <li>A variable can hold value (and can change)</li>
+        </ul>
+        <pre><code data-trim class="hljs language-csharp">
+          //  ┌ variable (which will be assigned a value)
+          //  │      ┌ literal (a number directly in the code)
+          //  │      │   ┌ literal (a number directly in the code)
+          int five = 2 + 3;
+          
+          // 5 = 1 + 2; // Error: cannot assign a value to a literal
+        </code></pre>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      // transition: 'slide',
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
+</html>

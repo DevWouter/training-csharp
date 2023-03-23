@@ -13,6 +13,7 @@ This file contains a checklist of code samples.
   - [x] Explain Math
   - [ ] Explain `char`
   - [ ] Explain `null`
+    - [ ] Explain `null` with `int?` (a value type)
   - [ ] Explain `var`
   - [ ] Explain `DateTime`
   - [ ] Explain `TimeSpan`
@@ -30,7 +31,6 @@ This file contains a checklist of code samples.
   - [x] Explain `for`
   - [x] Explain `foreach`
   - [x] Explain `break` and `continue`
-  - [ ] Explain `goto`
 - [ ] **File IO**
   - ???
 - [ ] **Collection**
@@ -76,7 +76,12 @@ This file contains a checklist of code samples.
 - [ ] **Generics**
   - ???
 - [ ] **Async/Await**
-  - ???
+  - [ ] Explain `Task`
+  - [ ] Explain `Task<T>`
+  - [ ] Explain `Task.Run`
+  - [ ] Explain `Task.WhenAll`
+  - [ ] Explain `Task.WhenAny`
+  - [ ] Explain `Task.Delay`
 - [ ] **Delegates**
   - ???
 - [ ] **LINQ**
@@ -90,10 +95,9 @@ This file contains a checklist of code samples.
 
 - [ ] **Debugging**
   - ??? 
-- [ ] **UnitTesting**
-  - ???
 
 ## Currently out of scope
+- [ ] Explain `goto`
 - Keywords
   - [ ] Explain `readonly`
   - [ ] Explain `init`
@@ -122,13 +126,6 @@ This file contains a checklist of code samples.
   - [ ] Explain `ManualResetEvent`
   - [ ] Explain `CountdownEvent`
   - [ ] Explain `Barrier`
-- [ ] Explain `async` and `await`
-  - [ ] Explain `Task`
-  - [ ] Explain `Task<T>`
-  - [ ] Explain `Task.Run`
-  - [ ] Explain `Task.WhenAll`
-  - [ ] Explain `Task.WhenAny`
-  - [ ] Explain `Task.Delay`
 - [ ] Explain Creating own exceptions
 - [ ] Explain `IDisposable`
   - [ ] Explain `using var xyz` statement
@@ -140,3 +137,4 @@ This file contains a checklist of code samples.
 - [ ] Explain `IFormatProvider`
 - [ ] Explain `IFormatProvider` and `IFormattable`
 - [ ] Explain `System.IO`
+- [ ] UnitTesting

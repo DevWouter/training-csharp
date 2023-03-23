@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Chapter 1</title>
+
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>C# Software Development</h1>
+      </section>
+      <section>
+        <h2>Overview Chapter 01</h2>
+        <ul>
+          <li>How does a computer work?</li>
+          <li>What happens when you press the power button?</li>
+          <li>What is .NET?</li>
+          <li>Hello world... The hard way</li>
+          <li>Let's write some code</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <section>
+          <h1>How does a computer work?</h1>
+        </section>
+        
+        <section>
+          <blockquote>A computer takes input, processes it, and gives output. </blockquote>
+        </section>
+
+        <section>
+          <h2>Computer history</h2>
+          <ul>
+            <li>1100 BCE: Abacus, analog computer</li>
+            <li>1623: The first mechanical computer</li>
+            <li>1950s: The first transistor computers</li>
+            <li>1960s: The first integrated circuit computers</li>
+            <li>1970s: The first microprocessor computers</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Early computers</h3>
+          <img src="images/C01/osman-koycu-DdxfliQ5ap8-unsplash.jpg" alt="Image of an early computer" width="50%" />
+          <p>Gears and levers, no electricity</p>
+        </section>
+        
+        <section>
+          <h2>Software</h2>
+          <ul>
+            <li>Programming is the process of writing instructions for a computer to follow.</li>
+            <li>A program is a set of instructions for a computer to follow.</li>
+            <li>Code is the instructions that make up a program.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>TL;DR</h3>
+          <ul>
+            <li>Early computers could only chang behavior by changing hardware</li>
+            <li>Modern computers can also change behavior by changing software</li>
+          </ul>
+        </section>
+
+ 
+        <section data-visibility="hidden">
+          <h2>Instructing the CPU</h2>
+          <ul>
+            <li>The CPU works with binary instructions (x86, x64, ARM, Apple Silicon, etc.)</li>
+            <li>A common low level language for writing instructions is Assembly (`JMP`, `MOV`, `ADD`, etc.)</li>
+            <li>Various higher level language (C#, VB.Net, C++, JavaScript, TypeScript, etc.)</li>
+            <li>Human language?</li>
+          </ul>
+          <aside class="notes">Compare instructing a CPU with providing a human with instructions. A CPU is "dumb"
+            compared to a human and needs
+            really specific (as in low context) instructions, while a human is "smart" and can work with incomplete or
+            non-specific instructions. </aside>
+        </section>
+        </section>
+        <section>
+        <section data-background-image="images/C01/john-smit-hRI8f-2WyDw-unsplash.jpg">
+          <h1>What happens when you press the power button?</h1>
+        </section>
+        <section>
+          <h3>Step by step</h3>
+          <p>
+          <ol>
+            <li>CPU executes a hardcoded `JUMP` instruction to the first instructions on a ROM</li>
+            <li>CPU starts executing BIOS directly from ROM</li>
+            <li>BIOS loads bootloader from disk into RAM</li>
+            <li>Bootloader loads OS kernel into RAM and hands over control</li>
+          </ol>
+          </p>
+          <aside class="notes">
+            The BIOS is the very first application that is always run on the machine.
+          </aside>
+        </section>
+        <section>
+          <h3>Terms</h3>
+          <p>
+          <ul>
+            <li>BIOS: Basic Input/Output System</li>
+            <li>CPU: Central Processing Unit</li>
+            <li>ROM: Read-Only Memory</li>
+            <li>RAM: Random Access Memory</li>
+            <li>OS: Operating System</li>
+          </ul>
+          </p>
+        </section>
+      </section>
+
+
+      <section>
+        <section>
+          <h1>.NET</h1>
+        </section>
+
+        <section>
+          <h2>.NET</h2>
+          <ul>
+            <li>Created by Microsoft in 2002</li>
+            <li>Open source and cross-platform</li>
+            <li>Runs on Windows, Linux, macOS, iOS, Android, and more</li>
+            <li>User run apps using the .NET runtime</li>
+            <li>Developers use the .NET SDK</li>
+          </ul>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Hello world... The hard way</h2>
+          <ol>
+            <li>Write in notepad.exe:
+              <pre><code class="hljs language-csharp">System.Console.WriteLine("Hello world!");</code></pre>
+            </li>
+            <li>Save the file as <code>HelloWorld.cs</code></li>
+            <li>Open "Developer Command Prompt"</li>
+            <li>Navigate to the folder where you saved the file (using <code>cd</code> to change directory)</li>
+            <li>Type <code>csc HelloWorld.cs</code></li>
+            <li>Type <code>HelloWorld.exe</code></li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Congratulations</h2>
+          <p>You just wrote your first program!</p>
+          <p>That means you are now a programmer!</p>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h1>Code as ...</h1>
+        </section>
+
+        <section>
+          <h2>Code as human</h2>
+          <blockquote>"I want to see a message on the screen that says 'Hello world!'"</blockquote>
+        </section>
+
+        <section>
+          <h2>Code as C#</h2>
+          <pre><code class="hljs language-csharp">System.Console.WriteLine("Hello world!");</code></pre>
+        </section>
+
+        <section>
+          <h2>Code as IL</h2>
+          <pre><code data-trim>
+            IL_0000	ldstr	"Hello world!"
+            IL_0005	call	Console.WriteLine (String)
+            IL_000A	ret
+          </code></pre>
+          <p>IL stands for intermediate language</p>
+        </section>
+
+        <section>
+          <h2>Code as x64 Assembly</h2>
+          <pre><code data-trim>
+            L0000	mov	rcx, 0x13286c12568
+            L000a	mov	rcx, [rcx]
+            L000d	jmp	qword ptr [0x7ffe3624fc90]
+            </code></pre>
+        </section>
+			</section>
+
+      <section>
+        <h2>Let's write some code!</h2>
+        <blockquote>"Any sufficiently advanced technology is indistinguishable from magic"</blockquote>
+        <aside class="notes">Rules:
+          <br> - If anything at the end of the first day feels like magic, let me know!
+          <br> - If you have a question, ask it
+        </aside>
+      </section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      // transition: 'slide',
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
+</html>
