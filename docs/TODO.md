@@ -15,15 +15,15 @@ This file contains a checklist of code samples.
   - [ ] Explain `null`
     - [ ] Explain `null` with `int?` (a value type)
   - [ ] Explain `var`
-  - [ ] Explain `DateTime`
-  - [ ] Explain `TimeSpan`
+  - [x] Explain `DateTime`
+  - [x] Explain `TimeSpan`
   - [ ] Explain `Guid`
 - [ ] **Methods**
   - [x] Explain `static` (done in OOP)
   - [x] Explain `ref` parameters (done in OOP)
   - [x] Explain `in` parameters (without the `in` keyword)
   - [ ] Explain `params` parameters
-  - [ ] Explain Method overloading
+  - [x] Explain Method overloading
 - [ ] **Branching**
   - [x] Explain `if` and `else`
   - [x] Explain `switch`
@@ -32,7 +32,12 @@ This file contains a checklist of code samples.
   - [x] Explain `foreach`
   - [x] Explain `break` and `continue`
 - [ ] **File IO**
-  - ???
+  - [x] Read file
+  - [x] Write file
+  - [x] Enumerate files
+  - [x] Delete files
+  - [x] Delete directories
+  - [ ] File streams
 - [ ] **Collection**
   - [x] Explain `Array<T>`
   - [x] Explain `List<T>`

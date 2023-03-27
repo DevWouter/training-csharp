@@ -7,8 +7,8 @@
    You can also put the multi-line halfway through a line.
 */
 
-// ┌ Type "Console" (also a static class)
-// │   ┌ The "." indicates that we are operating a method on the object
+// ┌ Type "Console" (a type)
+// │   ┌ The "." indicates that we access a method on the type
 // │   │ ┌ Method "WriteLine"
 // │   │ │       ┌ Opening parenthesis indicates that we are invoking the method and passing arguments
 // │   │ │       │ ┌ Argument (a string literal, which is a string enclosed in double quotes)
