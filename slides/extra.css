@@ -1,0 +1,18 @@
+/* Css selector for code without a class */
+code:not([class]) {
+  /* Light theme */
+  /* color: #a31515; */
+
+  /* Dark theme */
+  color: #d7ba7d;
+}
+
+.reveal p {
+  text-align: left;
+}
+.reveal ul {
+  display: block;
+}
+.reveal ol {
+  display: block;
+}

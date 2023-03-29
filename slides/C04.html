@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Chapter 3: Methods</title>
+
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/league.css">
+  <link rel="stylesheet" href="extra.css">
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/zenburn.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <section>
+          <h1>Chapter 4</h1>
+          <h2>Primitive types</h2>
+        </section>
+        <section>
+          <h2>Overview Chapter 04</h2>
+          <ul>
+            <li>String</li>
+            <li>Numbers</li>
+            <li>Math</li>
+            <li>Booleans</li>
+            <li>Enums</li>
+            <li>Date & Time</li>
+          </ul>
+        </section>
+      </section>
+
+      <section data-separator="\n------" data-separator-vertical="\n---" data-markdown="C04_P01_string.md"></section>
+      <section data-separator="\n------" data-separator-vertical="\n---" data-markdown="C04_P02_number.md"></section>
+      <section data-separator="\n------" data-separator-vertical="\n---" data-markdown="C04_P03_math.md"></section>
+      <section data-separator="\n------" data-separator-vertical="\n---" data-markdown="C04_P04_bool.md"></section>
+      <section data-separator="\n------" data-separator-vertical="\n---" data-markdown="C04_P05_enums.md"></section>
+      <section data-separator="\n------" data-separator-vertical="\n---" data-markdown="C04_P06_datetime.md"></section>
+
+
+      <section>
+        <h2>Let's write some code!</h2>
+        <blockquote>The function of a good software is to make the complex appear to be simple</blockquote>
+        <cite>Grady Booch</cite>
+        <aside class="notes">By combining functions we can create new functions </aside>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      // transition: 'slide',
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
+</html>

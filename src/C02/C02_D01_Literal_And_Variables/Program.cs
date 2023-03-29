@@ -9,7 +9,7 @@
 Console.WriteLine("Hello, world");
 
 
-// 🆕 Using a variable:
+// Using a variable:
 // ┌ Variable type is "string" (a built-in type)
 // │   ┌ variable name (so that we can refer to the value later)
 // │   │       ┌ Assign operator (stores the value in a variable)

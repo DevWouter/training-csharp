@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="extra.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +17,18 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<ul>
+						<li><a href="C01.html">Chapter 1</a></li>
+						<li><a href="C02.html">Chapter 2</a></li>
+						<li><a href="C03.html">Chapter 3</a></li>
+						<li><a href="C04.html">Chapter 4</a></li>
+						<li><a href="C05.html">Chapter 5</a></li>
+						<li><a href="C06.html">Chapter 6</a></li>
+						<li><a href="C07.html">Chapter 7</a></li>
+						<li><a href="C08.html">Chapter 8</a></li>
+					</ul>
+				</section>
 			</div>
 		</div>
 
@@ -30,8 +41,14 @@
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
-				hash: true,
-
+				hash: true,  // The "normal" size of the presentation, aspect ratio will
+  // be preserved when the presentation is scaled to fit different
+  // resolutions. Can be specified using percentage units.
+  width: 960,
+  height: 700,  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.01,
+  maxScale: 2.0,
+center: false,
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});

@@ -19,6 +19,7 @@ Then you will be able to access the slides at http://localhost:8000
 - Press `b` to black-out the screen (useful if you need to hide the slides from the audience so that they focus on you).
 
 Each chapter has its own file. Chapter 1 is `http://localhost:8000/C01.html` and chapter 2 is `http://localhost:8000/02.html` and so on.
+The index file `http://localhost:8000/index.html` contains a list of all the chapters.
 
 ## Code
 

@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="dist/reset.css">
   <link rel="stylesheet" href="dist/reveal.css">
   <link rel="stylesheet" href="dist/theme/black.css">
-
+  <link rel="stylesheet" href="extra.css">
+  
   <!-- Theme used for syntax highlighted code -->
   <link rel="stylesheet" href="plugin/highlight/monokai.css">
 </head>
@@ -35,138 +36,253 @@
         <section data-transition="none">
           <h3>Hello world</h3>
           <pre><code data-trim class="hljs language-csharp">
-            // ┌ Type "Console" (also a static class)
-            // │
-            // │
-            // │
-            // │
-            // │
-            // │
-            // │
-            // │
-            // │
-            // │
-            Console.WriteLine("Hello, world");
-          </code></pre>
-        </section>
-        <section data-transition="none">
-          <h3>Hello world</h3>
-          <pre><code data-trim class="hljs language-csharp">
-            // ┌ Type "Console" (also a static class)
-            // │   ┌ The "." indicates that we are invoking a method
-            // │   │ of that type ("Console")
-            // │   │
-            // │   │
-            // │   │
-            // │   │
-            // │   │
-            // │   │
-            // │   │ 
-            // │   │
-            Console.WriteLine("Hello, world");
-          </code></pre>
-        </section>
-        <section  data-transition="none">
-          <h3>Hello world</h3>
-          <pre><code data-trim class="hljs language-csharp">
-            // ┌ Type "Console" (also a static class)
-            // │   ┌ The "." indicates that we are invoking a method
-            // │   │ of that type ("Console")
-            // │   │ ┌ Method "WriteLine"
-            // │   │ │
-            // │   │ │
-            // │   │ │
-            // │   │ │
-            // │   │ │
-            // │   │ │
-            // │   │ │
-            Console.WriteLine("Hello, world");
-          </code></pre>
-        </section>
-        <section data-transition="none">
-          <h3>Hello world</h3>
-          <pre><code data-trim class="hljs language-csharp">
-            // ┌ Type "Console" (also a static class)
-            // │   ┌ The "." indicates that we are invoking a method
-            // │   │ of that type ("Console")
-            // │   │ ┌ Method "WriteLine"
-            // │   │ │       ┌ Opening parenthesis indicates that we 
-            // │   │ │       │ are invoking the method and passing
-            // │   │ │       │ arguments
-            // │   │ │       │ 
-            // │   │ │       │ 
-            // │   │ │       │ 
-            // │   │ │       │ 
-            Console.WriteLine("Hello, world");
-          </code></pre>
-        </section>
-        <section data-transition="none">
-          <h3>Hello world</h3>
-          <pre><code data-trim class="hljs language-csharp">
-            // ┌ Type "Console" (also a static class)
-            // │   ┌ The "." indicates that we are invoking a method
-            // │   │ of that type ("Console")
-            // │   │ ┌ Method "WriteLine"
-            // │   │ │       ┌ Opening parenthesis indicates that we 
-            // │   │ │       │ are invoking the method and passing
-            // │   │ │       │ arguments
-            // │   │ │       │ ┌ Argument (a string literal)
-            // │   │ │       │ │            
-            // │   │ │       │ │            
-            // │   │ │       │ │            
-            Console.WriteLine("Hello, world");
+          // 
+          // 
+          // 
+          // 
+          // 
+          // 
+          // 
+          // 
+          // 
+          // 
+          // 
+             Console.WriteLine("Hello, world");
           </code></pre>
         </section>
         <section data-transition="none">
           <h3>Hello world</h3>
           <pre><code data-trim class="hljs language-csharp">
           // ┌ Type "Console" (also a static class)
-          // │   ┌ The "." indicates that we are invoking a method
-          // │   │ of that type ("Console")
-          // │   │ ┌ Method "WriteLine"
-          // │   │ │       ┌ Opening parenthesis indicates that we 
-          // │   │ │       │ are invoking the method and passing
-          // │   │ │       │ arguments
-          // │   │ │       │ ┌ Argument (a string literal)
-          // │   │ │       │ │            ┌ End of the argument list
-          // │   │ │       │ │            │
-          // │   │ │       │ │            │
-          Console.WriteLine("Hello, world");
+          // │
+          // │
+          // │
+          // │
+          // │
+          // │
+          // │
+          // │
+          // │
+          // │
+             Console.WriteLine("Hello, world");
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Hello world</h3>
+          <pre><code data-trim class="hljs language-csharp">
+          // ┌ Type "Console" (also a static class)
+          // │      ┌ The "." indicates that we are accessing a method
+          // │      │ of that type ("Console")
+          // │      │
+          // │      │
+          // │      │
+          // │      │
+          // │      │
+          // │      │
+          // │      │ 
+          // │      │
+             Console.WriteLine("Hello, world");
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Hello world</h3>
+          <pre><code data-trim class="hljs language-csharp">
+          // ┌ Type "Console" (also a static class)
+          // │      ┌ The "." indicates that we are accessing a method
+          // │      │ of that type ("Console")
+          // │      │┌ Method "WriteLine"
+          // │      ││ 
+          // │      ││ 
+          // │      ││ 
+          // │      ││ 
+          // │      ││ 
+          // │      ││ 
+          // │      ││ 
+             Console.WriteLine("Hello, world");
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Hello world</h3>
+          <pre><code data-trim class="hljs language-csharp">
+          // ┌ Type "Console" (also a static class)
+          // │      ┌ The "." indicates that we are accessing a method
+          // │      │ of that type ("Console")
+          // │      │┌ Method "WriteLine"
+          // │      ││        ┌ Opening parenthesis indicates that we 
+          // │      ││        │ are invoking the method and passing
+          // │      ││        │ arguments
+          // │      ││        │ 
+          // │      ││        │ 
+          // │      ││        │ 
+          // │      ││        │ 
+             Console.WriteLine("Hello, world");
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Hello world</h3>
+          <pre><code data-trim class="hljs language-csharp">
+          // ┌ Type "Console" (also a static class)
+          // │      ┌ The "." indicates that we are accessing a method
+          // │      │ of that type ("Console")
+          // │      │┌ Method "WriteLine"
+          // │      ││        ┌ Opening parenthesis indicates that we 
+          // │      ││        │ are invoking the method and passing
+          // │      ││        │ arguments
+          // │      ││        │┌ Argument (a string literal)
+          // │      ││        ││            
+          // │      ││        ││            
+          // │      ││        ││            
+             Console.WriteLine("Hello, world");
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Hello world</h3>
+          <pre><code data-trim class="hljs language-csharp">
+          // ┌ Type "Console" (also a static class)
+          // │      ┌ The "." indicates that we are accessing a method
+          // │      │ of that type ("Console")
+          // │      │┌ Method "WriteLine"
+          // │      ││        ┌ Opening parenthesis indicates that we 
+          // │      ││        │ are invoking the method and passing
+          // │      ││        │ arguments
+          // │      ││        │┌ Argument (a string literal)
+          // │      ││        ││             ┌ End of the argument list
+          // │      ││        ││             │
+          // │      ││        ││             │
+             Console.WriteLine("Hello, world");
         </code></pre>
         </section>
         <section data-transition="none">
           <h3>Hello world</h3>
           <pre><code data-trim class="hljs language-csharp">
-        // ┌ Type "Console" (also a static class)
-        // │   ┌ The "." indicates that we are invoking a method
-        // │   │ of that type ("Console")
-        // │   │ ┌ Method "WriteLine"
-        // │   │ │       ┌ Opening parenthesis indicates that we 
-        // │   │ │       │ are invoking the method and passing
-        // │   │ │       │ arguments
-        // │   │ │       │ ┌ Argument (a string literal)
-        // │   │ │       │ │            ┌ End of the argument list
-        // │   │ │       │ │            │┌ Terminating the statement 
-        // │   │ │       │ │            ││ using a semicolon
-        Console.WriteLine("Hello, world");
+          // ┌ Type "Console" (also a static class)
+          // │      ┌ The "." indicates that we are accessing a method
+          // │      │ of that type ("Console")
+          // │      │┌ Method "WriteLine"
+          // │      ││        ┌ Opening parenthesis indicates that we 
+          // │      ││        │ are invoking the method and passing
+          // │      ││        │ arguments
+          // │      ││        │┌ Argument (a string literal)
+          // │      ││        ││             ┌ End of the argument list
+          // │      ││        ││             │┌ Terminating the statement 
+          // │      ││        ││             ││ using a semicolon
+             Console.WriteLine("Hello, world");
       </code></pre>
         </section>
       </section>
 
       <section>
-        <h2>Literal and variables</h2>
-        <ul>
-          <li>A literal is a value that is written directly into the source code.</li>
-          <li>A variable can hold value (and can change)</li>
-        </ul>
-        <pre><code data-trim class="hljs language-csharp">
-          //  ┌ variable (which will be assigned a value)
-          //  │      ┌ literal (a number directly in the code)
-          //  │      │   ┌ literal (a number directly in the code)
-          int five = 2 + 3;
+
+        <section>
+          <h2>Literal and variables</h2>
+          <ul>
+            <li>A literal is a value that is written directly into the source code.</li>
+            <li>A variable can hold value (and can change)</li>
+          </ul>
+          <pre><code data-trim class="hljs language-csharp">
+          // ┌ variable type
+          // │   ┌ variable name
+          // │   │    ┌ assign operator
+          // │   │    │ ┌ literal 
+          // │   │    │ │ ┌ plus operator
+          // │   │    │ │ │ ┌ literal
+          // │   │    │ │ │ │┌ statement terminator
+             int five = 2 + 3;
           
           // 5 = 1 + 2; // Error: cannot assign a value to a literal
-        </code></pre>
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Declaring a variable</h3>
+          <pre><code data-trim class="hljs language-csharp" data-line-numbers="1-2|4-5">
+            // Declaring a variable
+            int number;
+
+            // Assigning a value to a variable
+            number = 5; 
+          </code></pre>
+        </section>
+
+        <section>
+          <aside class="notes">All the values a an integer literal</aside>
+          <h3>Assigning multiple values</h3>
+          <pre><code data-trim class="hljs language-csharp" data-line-numbers="4-7">
+            // Declaring a variable
+            int number;
+
+            // Assigning a value to a variable
+            number = 5;
+            number = 14;
+            number = 50;
+          </code></pre>
+        </section>
+        
+        <section>
+          <h3>Errors</h3>
+          <h4>Assigning before declaring</h4>
+          <pre><code data-trim class="hljs language-csharp" data-line-numbers>
+            // 🐛 Error: variable "number" is not declared
+            number = 5;
+
+            // Declaring a variable
+            int number;
+          </code></pre>
+          <h4>Declaring twice</h4>
+          <pre><code data-trim class="hljs language-csharp" data-line-numbers>
+            // Declaring a variable
+            int number = 5;
+
+            // 🐛 Error: variable "number" is already declared
+            int number = 9; 
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Declare and assign</h3>
+          <pre><code data-trim class="hljs language-csharp" data-line-numbers>
+            // Declaring a variable AND assigning a value
+            int number = 5;
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Multiple variables</h3>
+          <pre><code data-trim class="hljs language-csharp" data-line-numbers>
+            int three = 3;
+            int seven = 4 + 3;
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Using variables</h3>
+          <pre><code data-trim class="hljs language-csharp" data-line-numbers>
+            int three = 3;
+            int seven = 3 + 4;
+            int ten   = three + seven;
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Using variables</h3>
+          <pre><code data-trim class="hljs language-csharp" data-line-numbers>
+            int three = 3;
+            int seven = 3 + 3;
+            int ten   = three + seven;
+
+            // Re-assigning a value
+            seven = 7;
+
+            // What is the value of the variable `ten`?
+            Console.WriteLine(ten);
+          </code></pre>
+        </section>
+      </section>
+
+      <section>
+        <h2>Let's write some code!</h2>
+        <blockquote>It's harder to read code<br> than to write code</blockquote>
+        <cite>Joel Spolsky</cite>
       </section>
     </div>
   </div>

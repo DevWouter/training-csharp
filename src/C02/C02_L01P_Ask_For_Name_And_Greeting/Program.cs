@@ -1,6 +1,4 @@
-﻿// Lab 01S - Ask for name and greeting
-//
-// Requirements:
+﻿// Requirements:
 // 1. Ask the user for "What is your name?"
 // 2. Ask the user for "How do you want to be greeted?"
 // 3. Combine the greeting and the name into a single string, separated the greeting and the name with a comma
@@ -17,5 +15,6 @@
 // 7. Don't forget to terminate statements with a semicolon
 
 Console.Write("What is your name? ");
+
 // TODO_0: Continue here
 

@@ -3,7 +3,7 @@ string greeting = "Hello";
 string name = "world";
 
 
-// 🆕 Combines the string literal "Hello, " with the value of the variable `name` and stores it in a variable
+// Combines the string literal "Hello, " with the value of the variable `name` and stores it in a variable
 // ┌ Variable type
 // │   ┌ Variable name 
 // │   │       ┌ Assign
