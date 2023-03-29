@@ -27,6 +27,8 @@ IL_000A ret
 
 IL stands for intermediate language
 
+notes: IL is what the runtime takes and converts to assembly
+
 ---
 
 ## Code as x64 Assembly
