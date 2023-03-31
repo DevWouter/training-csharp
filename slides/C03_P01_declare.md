@@ -50,7 +50,9 @@ void Say(string name, string text)
 Say("Wouter", "Hello World");
 ```
 
-notes: On line 8 we pass a string literal as first and second parameter. The first parameter is assigned to the `name` parameter and the second parameter is assigned to the `text` parameter.
+notes:
+- Terms: statement, parameter, argument, parameter list, string literal, string variable, interpolated string
+- On line 8 we pass a string literal as first and second parameter. The first parameter is assigned to the `name` parameter and the second parameter is assigned to the `text` parameter.
 
 ---
 ### Return values
@@ -66,20 +68,3 @@ int Add(int a, int b)
 int result = Add(1, 2);
 ```
 notes: The `return` statement is used to return a value from a method. The return type of the method must match the type of the value returned.
-
----
-### void is special
-
-```csharp []
-void Say(string name, string text)
-{
-    Console.WriteLine($"{name}: {text}");
-}
-
-int Add(int a, int b)
-{
-    return a + b;
-}
-```
-
-note: What does the `Say` method return? What does the `Add` method return?

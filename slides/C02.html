@@ -220,14 +220,6 @@
         
         <section>
           <h3>Errors</h3>
-          <h4>Assigning before declaring</h4>
-          <pre><code data-trim class="hljs language-csharp" data-line-numbers>
-            // 🐛 Error: variable "number" is not declared
-            number = 5;
-
-            // Declaring a variable
-            int number;
-          </code></pre>
           <h4>Declaring twice</h4>
           <pre><code data-trim class="hljs language-csharp" data-line-numbers>
             // Declaring a variable
@@ -235,6 +227,14 @@
 
             // 🐛 Error: variable "number" is already declared
             int number = 9; 
+          </code></pre>
+          <h4>Assigning before declaring</h4>
+          <pre><code data-trim class="hljs language-csharp" data-line-numbers>
+            // 🐛 Error: variable "number" is not declared
+            number = 5;
+
+            // Declaring a variable
+            int number;
           </code></pre>
         </section>
 

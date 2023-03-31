@@ -1,4 +1,7 @@
 ## Variable scope
+notes:
+- Looking at the lifetime of an variable
+- What happens to a variable if your application is exited?
 ---
 
 ### Paremeters have their own scope (1/2)
@@ -39,6 +42,7 @@ Say(name, text);
 ```csharp []
 int Add(int a, int b)
 {
+    a = a + 98;
     int result = a + b;
     return result;
 }
@@ -46,7 +50,11 @@ int Add(int a, int b)
 int a = 1;
 int b = 2;
 int result = Add(a, b);
+result = result - 1;
 ```
+
+notes: 
+- What is are the values of `a` and `result`?
 
 ---
 ### Errors (1/2)
@@ -93,56 +101,3 @@ string SystemSpeak = "Hello World";
 
 SystemSpeak(SystemSpeak);
 ```
-
----
-<!-- .slide: data-visibility="hidden" -->
-### Tip: Naming conventions
-
-Naming conventions are used to prevent conflicts between variables and methods.
-
-<div class="fragment">
-They are way that something is usually done, especially within a particular area or activity.
-</div>
-
-<div class="fragment">
-
-#### Naming conventions
-
-| Casing       | Usage                     |
-| ------------ | ------------------------- |
-| `camelCase`  | Variables and parameters  |
-| `PascalCase` | Methods, types and member |
-
-Conventions != rules
-
-</div>
-
----
-
-<!-- .slide: data-visibility="hidden" -->
-### Please don't 🫣
-
-
-```csharp []
-void sYSTEMsPEAK(string PARAM___TEXT)
-{
-    string lOcAlVaLue = "System: " + PARAM___TEXT;
-    Console.WriteLine(lOcAlVaLue);
-}
-```
-
-<div class="fragment">
-
-```csharp []
-void ಠ_ಠ(string text)
-{
-    Console.WriteLine(text);
-}
-
-ಠ_ಠ("Hello");
-```
-
-</div>
-
-<p class="fragment">Yes, this will compile</p>
-note: Pronounced as <a href="https://translate.google.com/?sl=en&tl=kn&text=%E0%B2%A0_%E0%B2%A0&op=translate">`tà underscore tà` (Google Translate)</a>

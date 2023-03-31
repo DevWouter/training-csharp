@@ -1,3 +1,3 @@
-# Math
+# Math & Comparison
 
-notes: See code
+(See code)

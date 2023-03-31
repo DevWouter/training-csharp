@@ -49,6 +49,23 @@ notes: Computers make binary choices (yes/no)
 ```csharp []
 if(DateTime.Now.Hour > 18) 
 {
+    // 🤔 Hmmm... Can you spot the problem?
+    Console.WriteLine("It past 6PM. Go home!");
+}
+```
+<p class="fragment">The problem is 18:01 is not consiered past 6PM, since we only look at the hour.</p>
+
+notes: 
+- Address the bug: What happens at 17:05? 18:05? 19:05?
+
+---
+
+## Example 2
+
+```csharp []
+if(DateTime.Now.Hour > 17) 
+{
+    // Hmmm... 
     Console.WriteLine("It past 6PM. Go home!");
 } 
 else 
@@ -57,24 +74,25 @@ else
 }
 ```
 
-notes: Remind people about statement blocks.
+notes: 
+- Bug fixed
 
 ---
 
 
-## Example 2
+## Example 3
 
 ```csharp []
 int hour = DateTime.Now.Hour;
-if(hour > 8 && hour < 17) 
+if(hour > 8 && hour < 18) 
 {
-    Console.WriteLine("It between 8:00 and 17:00. You should be at work");
+    Console.WriteLine("08:00-17:59: You are at work");
 } 
 else 
 {
-    if(hour > 18) 
+    if(hour > 20) 
     {
-        Console.WriteLine("It's late! Please go home!");
+        Console.WriteLine("It's very late! Please go home!");
     }
 }
 ```
@@ -82,6 +100,7 @@ else
 note: 
 - `else if` can be written without statement blocks.
 - Demo that it can be shortend
+- What happens at 16:05? 17:05? 18:05? 19:05?
 ---
 
 
@@ -89,15 +108,16 @@ note:
 
 ```csharp []
 int hour = DateTime.Now.Hour;
-if(hour > 8 && hour < 17) 
-    Console.WriteLine("08:00-17:00: You are at work");
-else if(hour > 18) 
-    Console.WriteLine("18:00 or later: You are at home");
+if(hour > 8 && hour < 18) 
+    Console.WriteLine("08:00-17:59: You are at work");
+else if(hour > 18)
+    Console.WriteLine("19:00 or later: You are at home");
 ```
 
 note: 
 - `else if` can be written without statement blocks.
 - Demo that it can be shortend
+- No output from 18:00-19:00
 
 ---
 

@@ -60,7 +60,7 @@ Hello\n\tWorld
 
 
 ---
-## @: Verbatim strings
+## @: Verbatim string
 
 ```csharp []
 string text = @"Hello

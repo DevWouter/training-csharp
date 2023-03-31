@@ -16,3 +16,13 @@ code:not([class]) {
 .reveal ol {
   display: block;
 }
+
+h2 {
+  text-align: left;
+}
+
+.reveal blockquote p:last-child:has(cite){
+  display: block;
+  text-align: right;
+  padding-right: 10px;
+}

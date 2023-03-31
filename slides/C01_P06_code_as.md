@@ -27,7 +27,9 @@ IL_000A ret
 
 IL stands for intermediate language
 
-notes: IL is what the runtime takes and converts to assembly
+notes:
+- IL is what the runtime takes and converts to assembly
+- Computer will perform instructions in the order they are written (just like how a computer starts)
 
 ---
 

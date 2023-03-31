@@ -5,19 +5,10 @@
 
 ## Step by step
 
-* CPU executes a hardcoded `JUMP` instruction to the first instructions on a ROM
-* CPU starts executing BIOS directly from ROM
-* BIOS loads bootloader from disk into RAM
-* Bootloader loads OS kernel into RAM and hands over control
+* CPU executes a hardcoded `JUMP` instruction to the first instructions on a ROM for the BIOS
+* BIOS loads bootloader from disk into RAM and `JUMP` to the first instruction in the bootloader
+* Bootloader loads OS kernel into RAM and `JUMP` to the first instruction in the OS kernel
 
-notes: The BIOS is the very first application that is always run on the machine.
-
----
-
-## Terms
-
-* BIOS: Basic Input/Output System
-* CPU: Central Processing Unit
-* ROM: Read-Only Memory
-* RAM: Random Access Memory
-* OS: Operating System
+notes: 
+- The BIOS is the very first application that is always run on the machine.
+- BIOS: Basic Input/Output System

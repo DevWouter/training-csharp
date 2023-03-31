@@ -22,6 +22,7 @@
 ---
 ## Integer sizes
 <div class="r-fit-text">
+
 - 8-bit
     - `sbyte` (min: `-128`, max: `127`)
     - `byte` (min: `0`, max: `255`)
@@ -34,6 +35,7 @@
 - 64-bit
     - `long` (min: `-9.223.372.036.854.775.808`, max: `9.223.372.036.854.775.807`)
     - `ulong` (min: `0`, max: `18.446.744.073.709.551.615`)
+
 </div>
 
 notes: the `s`-prefix stands for `signed` and the `u`-prefix stands for `unsigned`

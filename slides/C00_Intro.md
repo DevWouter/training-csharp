@@ -1,0 +1,66 @@
+# C# Training
+
+===
+
+# Introductions
+
+---
+
+## Introductions: Who am I?
+
+* I'm a software developer
+* 20 years as a professional developer
+* 15 years as a C# developer
+* Many industries
+
+notes:
+* Industries: Finance, Health, Security, Manufacturing, Energy, Entertainment
+* Fun fact: I'm a game developer
+
+---
+
+## Introductions: Who are you?
+
+| Hint          | Example                       |
+| :------------ | ----------------------------- |
+| Identity      | Name, age, job, hobbies, etc. |
+| Cause         | Why are you here?             |
+| Experience    | What do you already know?     |
+| Expectation   | What do you want to learn?    |
+| Entertainment | Any fun stories?              |
+
+===
+
+# Rules
+
+notes: The rules are designed to make sure that we can all learn together in the most optimal way.
+
+---
+
+## Rules
+
+1. Safe environment
+2. Questions? Feedback? Always!
+3. Avoid working ahead
+3. No outside help  
+   (AI, StackOverflow, Google, coworker, etc.)
+
+notes: 
+1. In order to improve ourselves, we need to be able to doubt ourselves and our ideas. This is hard to do if we are afraid of being judged.
+2. Asking can be at any time, answering may be delayed.
+3. Working ahead will make it harder for you to understand the material.
+4. The material is designed to be self-contained. If you use outside help, we as trainer failed or you are doing something else then what we intended.
+
+---
+
+## Rules
+
+Anything you want to add? Or change?
+
+===
+
+## Let's get started!
+
+> "The computer is incredibly fast, accurate, and stupid. Man is unbelievably slow, inaccurate, and brilliant. The marriage of the two is a force beyond calculation"
+>
+> <cite>&mdash; Source unknown</cite>
