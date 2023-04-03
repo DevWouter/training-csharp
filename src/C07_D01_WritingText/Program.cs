@@ -21,7 +21,7 @@ void AskQuestionAndStoreAnswer(string question)
 {
     Console.Write($"{question} ");
     string answer = Console.ReadLine();
-    
+    File.
     File.AppendAllText(@"C:\temp\answer.txt", $"Question: {question}");
     File.AppendAllText(@"C:\temp\answer.txt", $"\n");
     File.AppendAllText(@"C:\temp\answer.txt", $"Answer: {answer}");
