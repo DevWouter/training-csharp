@@ -5,7 +5,6 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>C12_D04_Boxing</RootNamespace>
     </PropertyGroup>
 
 </Project>

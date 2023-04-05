@@ -5,7 +5,6 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>C11_D02_Class_Intro_P6</RootNamespace>
     </PropertyGroup>
 
 </Project>
