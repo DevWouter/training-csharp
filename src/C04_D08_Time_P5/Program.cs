@@ -4,7 +4,6 @@
 
 var current = DateTime.Today;
 DateTime lunchTimeStart = current.AddMonths(1).AddDays(1).AddHours(12).AddMinutes(30);
-TimeSpan.MinValue.Days
 
 Console.WriteLine("How many minutes lunch? ");
 string answer = Console.ReadLine();
