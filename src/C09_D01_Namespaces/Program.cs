@@ -1,4 +1,4 @@
-﻿namespace DisplayColors
+﻿namespace Display
 {
     public enum Color
     {
@@ -9,7 +9,7 @@
     }
 }
 
-namespace PrinterColors
+namespace Printer
 {
     public enum Color
     {
@@ -25,13 +25,14 @@ public static class Program
 {
     public static void Main()
     {
-        // Console.WriteLine("Color: " + Color.White); // Which Color is this? The one from DisplayColors or PrinterColors?
+        // Which Color is this? The one from Display or Printer?
+        // Console.WriteLine("Color: " + Color.White); 
         
         // We can use the fully qualified name to specify which Color we want
         //                                    ┌ Namespace
-        //                                    │             ┌ Typename (enum)
-        //                                    │             │     ┌ Enum value
-        Console.WriteLine("Printer color: " + PrinterColors.Color.Black);
-        Console.WriteLine("Display color: " + DisplayColors.Color.Red);
+        //                                    │       ┌ Typename (enum)
+        //                                    │       │     ┌ Enum value
+        Console.WriteLine("Printer color: " + Printer.Color.Black);
+        Console.WriteLine("Display color: " + Display.Color.Red);
     }
 }

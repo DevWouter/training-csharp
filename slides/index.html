@@ -1,57 +1,81 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
-		<link rel="stylesheet" href="extra.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/league.css">
+	<link rel="stylesheet" href="extra.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
 				<section>
+					<h2>Chapters (0-10)</h2>
 					<ul>
-						<li><a href="C01.html">Chapter 1</a></li>
-						<li><a href="C02.html">Chapter 2</a></li>
-						<li><a href="C03.html">Chapter 3</a></li>
-						<li><a href="C04.html">Chapter 4</a></li>
-						<li><a href="C05.html">Chapter 5</a></li>
-						<li><a href="C06.html">Chapter 6</a></li>
-						<li><a href="C07.html">Chapter 7</a></li>
-						<li><a href="C08.html">Chapter 8</a></li>
+						<li><a href="C01.html">01: C# Software Development</a></li>
+						<li><a href="C02.html">02: Variables and literals</a></li>
+						<li><a href="C03.html">03: Methods</a></li>
+						<li><a href="C04.html">04: Primitive types</a></li>
+						<li><a href="C05.html">05: Branching</a></li>
+						<li><a href="C06.html">06: Looping</a></li>
+						<li><a href="C07.html">07: File</a></li>
+						<li><a href="C08.html">08: Collections</a></li>
+						<li><a href="C09.html">09: Namespaces</a></li>
+						<li><a href="C10.html">10: Exceptions</a></li>
 					</ul>
 				</section>
-			</div>
+				<section>
+					<h2>Chapters (10-11)</h2>
+					<ul>
+						<li><a href="C11.html">11: Object Orientated Programming</a></li>
+						<li><a href="C12.html">12: Inheritance and polymorphism</a></li>
+						<li><a href="C13.html">13: Generics</a></li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Extras</h2>
+					<ul>
+						<li><a href="X01.html">01: Debugging</a></li>
+					</ul>
+				</section>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,  // The "normal" size of the presentation, aspect ratio will
-  // be preserved when the presentation is scaled to fit different
-  // resolutions. Can be specified using percentage units.
-  width: 960,
-  height: 700,  // Bounds for smallest/largest possible scale to apply to content
-  minScale: 0.01,
-  maxScale: 2.0,
-center: false,
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,  // The "normal" size of the presentation, aspect ratio will
+			// be preserved when the presentation is scaled to fit different
+			// resolutions. Can be specified using percentage units.
+			//   width: 960,
+			//   height: 700,  // Bounds for smallest/largest possible scale to apply to content
+			//   minScale: 0.01,
+			//   maxScale: 2.0,
+			// center: false,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
