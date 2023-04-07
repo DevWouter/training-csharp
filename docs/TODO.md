@@ -2,6 +2,15 @@
 
 This file contains a checklist of code samples.
 
+**Shortlist**
+- [ ] Operator precedence
+- [ ] Rethrow
+- [ ] Records
+- [ ] Delegates
+- [ ] Action<T>/Func<T>
+- [ ] Async/await
+
+
 - [ ] **Variables and literals**
   - [x] Explain `int`
   - [x] Explain `double`
@@ -46,9 +55,9 @@ This file contains a checklist of code samples.
   - [x] Explain `IEnumerable<T>`
   - [x] Explain `yield return`
   - [x] Explain `yield break`
-- [ ] **Namespaces**
-  - [ ] Explain `using namespace`
-  - [ ] Explain `namespace`
+- [x] **Namespaces**
+  - [x] Explain `using namespace`
+  - [x] Explain `namespace`
 - [ ] **Exceptions** (basics)
   - [x] Explain `try`
   - [x] Explain `catch`
