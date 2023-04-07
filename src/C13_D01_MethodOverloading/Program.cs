@@ -1,6 +1,4 @@
-﻿// TODO: Maybe better when we cover generics?
-
-int intValue = 1234;
+﻿int intValue = 1234;
 double doubleValue = 1234.567d;
 float floatValue = 987.6543f;
 var stringValue = "Hello World!";
