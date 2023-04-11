@@ -49,3 +49,11 @@ ul.chapter-menu-items li {
 .slide-menu-wrapper .slide-menu-panel ul.chapter-menu-items li a {
   text-decoration: none;
 }
+
+.reveal pre{
+  font-size: 0.40em;
+}
+
+.reveal pre code{
+  max-height: 500px;
+}
