@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="dist/theme/league.css">
   <link rel="stylesheet" href="extra.css">
   <!-- Theme used for syntax highlighted code -->
-  <link rel="stylesheet" href="plugin/highlight/zenburn.css">
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
   <link rel="stylesheet" href="plugin/chalkboard/style.css">
   <link rel="stylesheet" href="plugin/customcontrols/style.css">
   <link rel="stylesheet" href="plugin/menu/font-awesome/css/fontawesome.css">
@@ -43,7 +43,7 @@
       // Learn about plugins: https://revealjs.com/plugins/
       plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealChalkboard, RevealCustomControls, RevealMenu],
       chalkboard: {
-        boardmarkerWidth: 5,
+        boardmarkerWidth: 4,
         chalkWidth: 7,
         chalkEffect: 1.0,
         storage: null,
@@ -92,19 +92,74 @@
           {
             title: 'Chapters',
             icon: '<i class="fa fa-book">',
-            content: `<p><ul class='chapter-list'>
-<li><a href='C00.html'>Intro: C# Training</a></li>
-<li><a href='C01.html'>Chapter 1: Developing in C#</a></li>
-<li><a href='C02.html'>Chapter 2: Variables and Literals</a></li>
-<li><a href='C03.html'>Chapter 3: Methods</a></li>
-<li><a href='C04.html'>Chapter 4: Primitive types</a></li>
-<li><a href='C05.html'>Chapter 5: Branching</a></li>
-<li><a href='C06.html'>Chapter 6: Repetition</a></li>
-<li><a href='C07.html'>Chapter 7: File Input/Output</a></li>
-<li><a href='C08.html'>Chapter 8: Collections</a></li>
-<li><a href='C10.html'>Chapter 10: Exceptions</a></li>
-<li><a href='C11.html'>Chapter 11: Namespaces</a></li>
-</ul></p>`
+            content: `<ul class='chapter-menu-items'>
+<li class="chapter-menu-item">
+<a class="chapter-menu-item-title" href="C00.html">
+<i class="fas fa-check-circle fa-fw"></i>
+Intro: C# Training
+</a>
+</li>
+<li class="chapter-menu-item">
+<a class="chapter-menu-item-title" href="C01.html">
+<i class="fas fa-arrow-alt-circle-right fa-fw"></i>
+Chapter 1: Developing in C#
+</a>
+</li>
+<li class="chapter-menu-item">
+<a class="chapter-menu-item-title" href="C02.html">
+<i class="far fa-circle fa-fw"></i>
+Chapter 2: Variables and Literals
+</a>
+</li>
+<li class="chapter-menu-item">
+<a class="chapter-menu-item-title" href="C03.html">
+<i class="far fa-circle fa-fw"></i>
+Chapter 3: Methods
+</a>
+</li>
+<li class="chapter-menu-item">
+<a class="chapter-menu-item-title" href="C04.html">
+<i class="far fa-circle fa-fw"></i>
+Chapter 4: Primitive types
+</a>
+</li>
+<li class="chapter-menu-item">
+<a class="chapter-menu-item-title" href="C05.html">
+<i class="far fa-circle fa-fw"></i>
+Chapter 5: Branching
+</a>
+</li>
+<li class="chapter-menu-item">
+<a class="chapter-menu-item-title" href="C06.html">
+<i class="far fa-circle fa-fw"></i>
+Chapter 6: Repetition
+</a>
+</li>
+<li class="chapter-menu-item">
+<a class="chapter-menu-item-title" href="C07.html">
+<i class="far fa-circle fa-fw"></i>
+Chapter 7: File Input/Output
+</a>
+</li>
+<li class="chapter-menu-item">
+<a class="chapter-menu-item-title" href="C08.html">
+<i class="far fa-circle fa-fw"></i>
+Chapter 8: Collections
+</a>
+</li>
+<li class="chapter-menu-item">
+<a class="chapter-menu-item-title" href="C10.html">
+<i class="far fa-circle fa-fw"></i>
+Chapter 10: Exceptions
+</a>
+</li>
+<li class="chapter-menu-item">
+<a class="chapter-menu-item-title" href="C11.html">
+<i class="far fa-circle fa-fw"></i>
+Chapter 11: Namespaces
+</a>
+</li>
+</ul>`
           }
         ]
       }

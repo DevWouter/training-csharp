@@ -49,7 +49,7 @@ if (forceFlag || filesToOverwrite.length === 0) {
 
 function generateHTML() {
     console.log('Generating HTML files...');
-    
+
 
     // Load the template file in memory
     var ddata = fs.readFileSync(templateFilePath, 'utf8', (err, data) => {
@@ -60,32 +60,54 @@ function generateHTML() {
         }
     });
 
-    var links = mdFiles
-        .map(mdFile => path.basename(mdFile))
-        .map(mdFile => {
-            return "<a href='" + mdFile.replace('.md', '.html') + "'>" + getTitleOfMarkdown(mdFile) + "</a>";
-        }).map(link => "<li>" + link + "</li>");
-    
-    var linkMap = "<ul class='chapter-list'>\n"+ links.join('\n') + "\n</ul>";
-
-
-
     // For each markdown file, generate the HTML file
-    mdFiles.forEach(mdFile => {
-        console.log(`Generating ${mdFile.replace('.md', '.html')}`);
-        const htmlFile = mdFile.replace('.md', '.html');
+    mdFiles.forEach((currentMdFile, currentMdFileIndex) => {
+        console.log(`Generating ${currentMdFile.replace('.md', '.html')}`);
+
+        var links = mdFiles
+            .map(mdFile => {
+                return { path: path.basename(mdFile), current: path.basename(mdFile) === path.basename(currentMdFile) };
+            })
+            .map(({ path, current }, index) => {
+                const title = getTitleOfMarkdown(path);
+                const href = path.replace('.md', '.html');
+                const linkClasses = ['chapter-menu-item-title'];
+                const itemClasses = ['chapter-menu-item'];
+
+                const lines = [`<li class="${itemClasses.join(' ')}">`];
+                lines.push(`<a class="${linkClasses.join(' ')}" href="${href}">`);
+
+                if (index == currentMdFileIndex) {
+                    lines.push(`<i class="fas fa-arrow-alt-circle-right fa-fw"></i>`);
+                }
+                if (index < currentMdFileIndex) {
+                    lines.push(`<i class="fas fa-check-circle fa-fw"></i>`);
+                }
+                if (index > currentMdFileIndex) {
+                    lines.push(`<i class="far fa-circle fa-fw"></i>`);
+                }
+                lines.push(`${title}`);
+                lines.push(`</a>`);
+                lines.push(`</li>`);
+
+                return lines.join('\n');
+            });
+
+        var linkMap = "<ul class='chapter-menu-items'>\n" + links.join('\n') + "\n</ul>";
+
+
+        const htmlFile = currentMdFile.replace('.md', '.html');
         let pageData = ddata;
 
         // Read the first line of the markdown file
-        let title = getTitleOfMarkdown(mdFile);
+        let title = getTitleOfMarkdown(currentMdFile);
 
         pageData = pageData.replace(/\$MARKDOWN_TITLE\$/g, path.basename(title));
-        pageData = pageData.replace(/\$MARKDOWN_FILE\$/g, path.basename(mdFile));
+        pageData = pageData.replace(/\$MARKDOWN_FILE\$/g, path.basename(currentMdFile));
         pageData = pageData.replace(/\$MARKDOWN_CHAPTERS\$/g, linkMap);
 
         fs.writeFileSync(htmlFile, pageData);
     });
-    // });
 }
 
 function getTitleOfMarkdown(mdFile) {

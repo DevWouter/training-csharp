@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="dist/theme/league.css">
   <link rel="stylesheet" href="extra.css">
   <!-- Theme used for syntax highlighted code -->
-  <link rel="stylesheet" href="plugin/highlight/zenburn.css">
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
   <link rel="stylesheet" href="plugin/chalkboard/style.css">
   <link rel="stylesheet" href="plugin/customcontrols/style.css">
   <link rel="stylesheet" href="plugin/menu/font-awesome/css/fontawesome.css">
@@ -43,7 +43,7 @@
       // Learn about plugins: https://revealjs.com/plugins/
       plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealChalkboard, RevealCustomControls, RevealMenu],
       chalkboard: {
-        boardmarkerWidth: 5,
+        boardmarkerWidth: 4,
         chalkWidth: 7,
         chalkEffect: 1.0,
         storage: null,
@@ -92,7 +92,7 @@
           {
             title: 'Chapters',
             icon: '<i class="fa fa-book">',
-            content: `<p>$MARKDOWN_CHAPTERS$</p>`
+            content: `$MARKDOWN_CHAPTERS$`
           }
         ]
       }
