@@ -5,21 +5,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Chapter 2</title>
+  <title>Chapter 2: Variables and Literals</title>
 
   <link rel="stylesheet" href="dist/reset.css">
   <link rel="stylesheet" href="dist/reveal.css">
   <link rel="stylesheet" href="dist/theme/league.css">
   <link rel="stylesheet" href="extra.css">
-  
   <!-- Theme used for syntax highlighted code -->
   <link rel="stylesheet" href="plugin/highlight/zenburn.css">
+  <link rel="stylesheet" href="plugin/chalkboard/style.css">
+  <link rel="stylesheet" href="plugin/customcontrols/style.css">
+  <link rel="stylesheet" href="plugin/menu/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" href="plugin/menu/menu.css">
 </head>
 
 <body>
   <div class="reveal">
     <div class="slides">
-      <section data-separator="\n\*{3,}" data-separator-vertical="\n-{3,}"  data-markdown="C02.md"></section>
+      <section data-separator="\n\*{3,}" data-separator-vertical="\n-{3,}" data-markdown="C02.md"></section>
     </div>
   </div>
 
@@ -27,6 +30,9 @@
   <script src="plugin/notes/notes.js"></script>
   <script src="plugin/markdown/markdown.js"></script>
   <script src="plugin/highlight/highlight.js"></script>
+  <script src="plugin/chalkboard/plugin.js"></script>
+  <script src="plugin/customcontrols/plugin.js"></script>
+  <script src="plugin/menu/menu.js"></script>
   <script>
     // More info about initialization & config:
     // - https://revealjs.com/initialization/
@@ -35,7 +41,76 @@
       hash: true,
       // transition: 'slide',
       // Learn about plugins: https://revealjs.com/plugins/
-      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+      // plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealChalkboard, RevealCustomControls, RevealMenu],
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealChalkboard],
+      chalkboard: {
+        boardmarkerWidth: 5,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: ['rgba(127,127,127,.1)', path + 'img/blackboard.png'],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2 },
+        eraser: { src: path + 'img/sponge.png', radius: 20 },
+        boardmarkers: [
+          { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto' },
+          { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto' },
+          { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto' },
+          { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto' },
+          { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto' },
+          { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto' },
+          // { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
+        ],
+        chalks: [
+          { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto' },
+          { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto' },
+          { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto' },
+          { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto' },
+          { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto' },
+          { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto' },
+          { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto' }
+        ]
+      },
+      customcontrols: {
+        controls: [
+          {
+            icon: '🖍️',
+            title: 'Toggle chalkboard (B)',
+            action: 'RevealChalkboard.toggleChalkboard();'
+          },
+          {
+            icon: '📓',
+            title: 'Toggle notes canvas (C)',
+            action: 'RevealChalkboard.toggleNotesCanvas();'
+          }
+        ]
+      },
+      menu: {
+        // ...
+
+        custom: [
+          {
+            title: 'Chapters',
+            icon: '<i class="fa fa-book">',
+            content: `<p><ul class='chapter-list'>
+<li><a href='C00.html'>Intro: C# Training</a></li>
+<li><a href='C01.html'>Chapter 1: Developing in C#</a></li>
+<li><a href='C02.html'>Chapter 2: Variables and Literals</a></li>
+<li><a href='C03.html'>Chapter 3: Methods</a></li>
+<li><a href='C04.html'>Chapter 4: Primitive types</a></li>
+<li><a href='C05.html'>Chapter 5: Branching</a></li>
+<li><a href='C06.html'>Chapter 6: Repetition</a></li>
+<li><a href='C07.html'>Chapter 7: File Input/Output</a></li>
+<li><a href='C08.html'>Chapter 8: Collections</a></li>
+<li><a href='C10.html'>Chapter 10: Exceptions</a></li>
+<li><a href='C11.html'>Chapter 11: Namespaces</a></li>
+</ul></p>`
+          }
+        ]
+      }
     });
   </script>
 </body>

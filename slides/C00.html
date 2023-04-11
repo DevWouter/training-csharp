@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Chapter 0: Intro</title>
+  <title>Intro: C# Training</title>
 
   <link rel="stylesheet" href="dist/reset.css">
   <link rel="stylesheet" href="dist/reveal.css">
@@ -41,9 +41,10 @@
       hash: true,
       // transition: 'slide',
       // Learn about plugins: https://revealjs.com/plugins/
-      plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealChalkboard, RevealCustomControls, RevealMenu],
+      // plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealChalkboard, RevealCustomControls, RevealMenu],
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealChalkboard],
       chalkboard: {
-        boardmarkerWidth: 3,
+        boardmarkerWidth: 5,
         chalkWidth: 7,
         chalkEffect: 1.0,
         storage: null,
@@ -55,13 +56,13 @@
         grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2 },
         eraser: { src: path + 'img/sponge.png', radius: 20 },
         boardmarkers: [
-          { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
-          { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto' },
           { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto' },
+          { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto' },
           { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto' },
           { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto' },
           { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto' },
-          { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto' }
+          { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto' },
+          // { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
         ],
         chalks: [
           { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto' },
@@ -87,6 +88,29 @@
           }
         ]
       },
+      menu: {
+        // ...
+
+        custom: [
+          {
+            title: 'Chapters',
+            icon: '<i class="fa fa-book">',
+            content: `<p><ul class='chapter-list'>
+<li><a href='C00.html'>Intro: C# Training</a></li>
+<li><a href='C01.html'>Chapter 1: Developing in C#</a></li>
+<li><a href='C02.html'>Chapter 2: Variables and Literals</a></li>
+<li><a href='C03.html'>Chapter 3: Methods</a></li>
+<li><a href='C04.html'>Chapter 4: Primitive types</a></li>
+<li><a href='C05.html'>Chapter 5: Branching</a></li>
+<li><a href='C06.html'>Chapter 6: Repetition</a></li>
+<li><a href='C07.html'>Chapter 7: File Input/Output</a></li>
+<li><a href='C08.html'>Chapter 8: Collections</a></li>
+<li><a href='C10.html'>Chapter 10: Exceptions</a></li>
+<li><a href='C11.html'>Chapter 11: Namespaces</a></li>
+</ul></p>`
+          }
+        ]
+      }
     });
   </script>
 </body>
