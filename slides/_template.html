@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Chapter 0: Intro</title>
+  <title>$MARKDOWN_TITLE$</title>
 
   <link rel="stylesheet" href="dist/reset.css">
   <link rel="stylesheet" href="dist/reveal.css">
@@ -22,7 +22,7 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section data-separator="\n\*{3,}" data-separator-vertical="\n-{3,}" data-markdown="C00.md"></section>
+      <section data-separator="\n\*{3,}" data-separator-vertical="\n-{3,}" data-markdown="$MARKDOWN_FILE$"></section>
     </div>
   </div>
 
@@ -43,7 +43,7 @@
       // Learn about plugins: https://revealjs.com/plugins/
       plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealChalkboard, RevealCustomControls, RevealMenu],
       chalkboard: {
-        boardmarkerWidth: 3,
+        boardmarkerWidth: 5,
         chalkWidth: 7,
         chalkEffect: 1.0,
         storage: null,
@@ -55,13 +55,13 @@
         grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2 },
         eraser: { src: path + 'img/sponge.png', radius: 20 },
         boardmarkers: [
-          { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
-          { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto' },
           { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto' },
+          { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto' },
           { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto' },
           { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto' },
           { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto' },
-          { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto' }
+          { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto' },
+          // { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
         ],
         chalks: [
           { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto' },
@@ -87,6 +87,15 @@
           }
         ]
       },
+      menu: {
+        custom: [
+          {
+            title: 'Chapters',
+            icon: '<i class="fa fa-book">',
+            content: `<p>$MARKDOWN_CHAPTERS$</p>`
+          }
+        ]
+      }
     });
   </script>
 </body>

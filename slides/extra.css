@@ -34,3 +34,7 @@ h2 {
 .reveal table.--with-cells tbody tr:last-child td{
   border-bottom: 1px solid silver;
 }
+
+ul.chapter-list{
+  padding-left: 12px;
+}
