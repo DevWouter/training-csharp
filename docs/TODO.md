@@ -5,7 +5,7 @@ This file contains a checklist of code samples.
 **Shortlist**
 - [ ] Operator precedence
 - [ ] Rethrow
-- [ ] Records
+- [x] Records
 - [ ] Delegates
 - [ ] Action<T>/Func<T>
 - [ ] Async/await
