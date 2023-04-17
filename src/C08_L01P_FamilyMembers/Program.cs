@@ -4,10 +4,10 @@
  * Complete the application so that the user can manage a family
  *
  * Medals:
- * [🥉] Bronze: Perform all TODO_? in the code below
- * [📝] Silver: Print the family members after each command
- * [📝] Gold: Save/Restore more than one family
- * [📝] Platinum: Manage (add,edit,remove) multiple families 
+ * - Bronze: Perform all TODO_? in the code below
+ * - Silver: Print the family members after each command
+ * - Gold: Save/Restore more than one family
+ * - Platinum: Manage (add,edit,remove) multiple families 
  *
  * Hints:
  * 1. Start with TODO_0 and change the code in THAT function until it does what TODO_0 requires.

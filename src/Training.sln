@@ -184,7 +184,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C09_D09_Struct_RefKeyword",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C09_D10_Multiple_Constructors", "C09_D10_Multiple_Constructors\C09_D10_Multiple_Constructors.csproj", "{079D4AE8-E773-4659-B033-95EDD5167AD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C09_D11_Finalizer", "C09_D11_Finalizer\C09_D11_Finalizer.csproj", "{8724B88F-A435-4EEC-9859-5B2EFD5EE276}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CXX_DXX_Finalizer", "CXX_DXX_Finalizer\CXX_DXX_Finalizer.csproj", "{8724B88F-A435-4EEC-9859-5B2EFD5EE276}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C09_D12_PartialKeyword_P1", "C09_D12_PartialKeyword_P1\C09_D12_PartialKeyword_P1.csproj", "{0795A715-6430-4269-870D-27B93EA9F291}"
 EndProject
