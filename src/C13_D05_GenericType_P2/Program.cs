@@ -1,41 +1,47 @@
-﻿var nl2En = new Translator<string, string>();
-nl2En.Add("Hond", "Dog");
-nl2En.Add("Kat", "Cat");
-nl2En.Add("Muis", "Mouse");
+﻿ContainerLine<Food> line = new ContainerLine<Food>();
+line.Add(Food.Pizza);
+line.Add(Food.Salad);
+line.Add(Food.Pasta);
+line.Add(Food.IceCream);
 
-Console.WriteLine("'Hond' in english is " + nl2En.Translate("Hond"));
-
-var dev2En = new Translator<TranslateStrings, string>();
-dev2En.Add(TranslateStrings.HelloWorld, "Hello World!");
-dev2En.Add(TranslateStrings.GoodbyeWorld, "Goodbye World!");
-
-Console.WriteLine("TranslateStrings.HelloWorld in english is " + dev2En.Translate(TranslateStrings.HelloWorld));
-
-public enum TranslateStrings
+var currentContainer = line.First;
+while (currentContainer != null)
 {
-    HelloWorld,
-    GoodbyeWorld,
+    Console.WriteLine(currentContainer.Content);
+    currentContainer = currentContainer.Next;
 }
 
-public class Translator<TKey, TValue>
+public class Container<T>
 {
-    public record Entry(TKey Key, TValue Value);
+    public T Content { get; set; }
+    public Container<T>? Next { get; set; }
+}
 
-    private readonly Chain<Entry> _chain = new Chain<Entry>();
+public class ContainerLine<T>
+{
+    public Container<T>? First { get; set; }
+    public Container<T>? Last { get; set; }
 
-    public void Add(TKey key, TValue value)
+    public void Add(T value)
     {
-        _chain.Add(new Entry(key, value));
-    }
-
-    public TValue Translate(TKey key)
-    {
-        foreach (var entry in _chain.GetValues())
+        var newContainer = new Container<T> { Content = value };
+        if (Last != null)
         {
-            if (entry.Key.Equals(key))
-                return entry.Value;
+            Last.Next = newContainer;
+            Last = newContainer;
         }
-
-        throw new Exception("Key not found");
+        else
+        {
+            First = newContainer;
+            Last = newContainer;
+        }
     }
+}
+
+enum Food
+{
+    Pizza,
+    Pasta,
+    Salad,
+    IceCream
 }

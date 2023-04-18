@@ -1,5 +1,10 @@
-﻿Ship bulkContainerShip = new Ship(100_000);
-Ship goodsContainerShip = new Ship(100_000);
+﻿// Requirement:
+// [x] Ships must carry containers
+// [x] Ships can only containers of a certain kind
+// [x] Ships must carry an specific kind of container
+
+Ship<BulkContainer> bulkContainerShip = new Ship<BulkContainer>(100_000);
+Ship<GoodsContainer> goodsContainerShip = new Ship<GoodsContainer>(100_000);
 
 bulkContainerShip.AddContainer(new BulkContainer(10_000));
 bulkContainerShip.AddContainer(new BulkContainer(20_000));
@@ -7,10 +12,17 @@ bulkContainerShip.AddContainer(new BulkContainer(20_000));
 goodsContainerShip.AddContainer(new GoodsContainer(1_000, 10));
 goodsContainerShip.AddContainer(new GoodsContainer(2_000, 20));
 
-// Sadly the following is now also allowed
-bulkContainerShip.AddContainer(new GoodsContainer(1_000, 10));
+// The following will no longer work.
+// A bulk container ship can only carry bulk containers and a goods container ship can only carry goods containers.
+// bulkContainerShip.AddContainer(new GoodsContainer(1_000, 10));
 
-public class BulkContainer : IContainer
+// The following will no longer work.
+// Ship<Ship<???>.IContainer> carryAllShip = new Ship<IContainer>(100_000);
+// carryAllShip.AddContainer(new BulkContainer(10_000));
+// carryAllShip.AddContainer(new GoodsContainer(2_000, 20));
+
+
+public class BulkContainer : Ship<BulkContainer>.IContainer
 {
     private const int OwnWeight = 8_000;
     public int Weight => OwnWeight + CoalWeight;
@@ -22,7 +34,7 @@ public class BulkContainer : IContainer
     }
 }
 
-public class GoodsContainer : IContainer
+public class GoodsContainer : Ship<GoodsContainer>.IContainer
 {
     private const int OwnWeight = 10_000;
     public int Weight => OwnWeight + (ItemWeight * ItemCount);
@@ -36,23 +48,24 @@ public class GoodsContainer : IContainer
     }
 }
 
-public interface IContainer
-{
-    int Weight { get; }
-}
-
-public class Ship
+public class Ship<TContainer>
+    where TContainer : Ship<TContainer>.IContainer
 {
     public int MaxWeight { get; private set; }
     public int CurrentWeight { get; private set; }
-    public List<IContainer> Containers { get; private set; } = new();
+    public List<TContainer> Containers { get; private set; } = new();
+    
+    public interface IContainer
+    {
+        int Weight { get; }
+    }
 
     public Ship(int maxWeight)
     {
         MaxWeight = maxWeight;
     }
 
-    public void AddContainer(IContainer container)
+    public void AddContainer(TContainer container)
     {
         if (CurrentWeight + container.Weight > MaxWeight)
             throw new InvalidOperationException("Ship is too heavy!");

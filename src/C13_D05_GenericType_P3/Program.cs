@@ -1,63 +1,55 @@
-﻿Ship bulkContainerShip = new Ship(100_000);
-Ship goodsContainerShip = new Ship(100_000);
+﻿ContainerLine<Food> line = new ContainerLine<Food>();
+line.Add(Food.Pizza);
+line.Add(Food.Salad);
+line.Add(Food.Pasta);
+line.Add(Food.IceCream);
 
-bulkContainerShip.AddContainer(new BulkContainer(10_000));
-bulkContainerShip.AddContainer(new BulkContainer(20_000));
-
-goodsContainerShip.AddContainer(new GoodsContainer(1_000, 10));
-goodsContainerShip.AddContainer(new GoodsContainer(2_000, 20));
-
-// Sadly the following is now also allowed
-bulkContainerShip.AddContainer(new GoodsContainer(1_000, 10));
-
-public class BulkContainer : IContainer
+foreach (var food in line.GetValues())
 {
-    private const int OwnWeight = 8_000;
-    public int Weight => OwnWeight + CoalWeight;
-    public int CoalWeight { get; private set; }
+    Console.WriteLine(food);
+}
 
-    public BulkContainer(int coalWeight)
+public class Container<T>
+{
+    public T Content { get; set; }
+    public Container<T>? Next { get; set; }
+}
+
+public class ContainerLine<T>
+{
+    public Container<T>? First { get; set; }
+    public Container<T>? Last { get; set; }
+
+    public void Add(T value)
     {
-        CoalWeight = coalWeight;
+        var newContainer = new Container<T> { Content = value };
+        if (Last != null)
+        {
+            Last.Next = newContainer;
+            Last = newContainer;
+        }
+        else
+        {
+            First = newContainer;
+            Last = newContainer;
+        }
+    }
+
+    public IEnumerable<T> GetValues()
+    {
+        var currentContainer = First;
+        while (currentContainer != null)
+        {
+            yield return currentContainer.Content;
+            currentContainer = currentContainer.Next;
+        }
     }
 }
 
-public class GoodsContainer : IContainer
+enum Food
 {
-    private const int OwnWeight = 10_000;
-    public int Weight => OwnWeight + (ItemWeight * ItemCount);
-    public int ItemWeight { get; private set; }
-    public int ItemCount { get; private set; }
-
-    public GoodsContainer(int itemWeight, int itemCount)
-    {
-        ItemWeight = itemWeight;
-        ItemCount = itemCount;
-    }
-}
-
-public interface IContainer
-{
-    int Weight { get; }
-}
-
-public class Ship
-{
-    public int MaxWeight { get; private set; }
-    public int CurrentWeight { get; private set; }
-    public List<IContainer> Containers { get; private set; } = new();
-
-    public Ship(int maxWeight)
-    {
-        MaxWeight = maxWeight;
-    }
-
-    public void AddContainer(IContainer container)
-    {
-        if (CurrentWeight + container.Weight > MaxWeight)
-            throw new InvalidOperationException("Ship is too heavy!");
-
-        Containers.Add(container);
-        CurrentWeight += container.Weight;
-    }
+    Pizza,
+    Pasta,
+    Salad,
+    IceCream
 }
