@@ -1,13 +1,24 @@
-﻿var numberSlot = new Slot<int>();
-numberSlot.Value = 1234;
+﻿var numberContainer = new Container<int>();
+numberContainer.Content = 1234;
 
-var stringSlot = new Slot<string>();
-stringSlot.Value = "Hello World!";
+var stringContainer = new Container<string>();
+stringContainer.Content = "Hello World!";
 
-Console.WriteLine("numberSlot.Value: " + numberSlot.Value);
-Console.WriteLine("stringSlot.Value: " + stringSlot.Value);
+var foodContainer = new Container<Food>();
+foodContainer.Content = Food.Pizza;
 
-public class Slot<T>
+Console.WriteLine("numberContainer.Content: " + numberContainer.Content);
+Console.WriteLine("stringContainer.Content: " + stringContainer.Content);
+Console.WriteLine("foodContainer.Content: " + foodContainer.Content);
+
+public class Container<T>
 {
-    public T Value { get; set; }
+    public T Content { get; set; }
+}
+
+public enum Food
+{
+    Pizza,
+    Pasta,
+    Salad
 }
