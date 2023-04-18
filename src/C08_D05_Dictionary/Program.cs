@@ -7,7 +7,7 @@ Dictionary<string, string> dictionary_EN_to_NL = new Dictionary<string, string>(
 //                      ┌ Key
 //                      │       ┌ Value
 dictionary_EN_to_NL.Add("Hello", "Hallo");
-dictionary_EN_to_NL.Add("Hi", "Hello"); // We actually use "hoi" in dutch, but this is to prove that we can use the same value for a different key.
+dictionary_EN_to_NL.Add("Hi", "Hallo"); // We actually use "hoi" in dutch, but this is to prove that we can use the same value for a different key.
 // dictionary_EN_to_NL.Add("Hi", "Hoi"); // <-- Adding the same key again will cause an error.
 dictionary_EN_to_NL.Add("Goodbye", "Tot ziens");
 
