@@ -26,7 +26,7 @@ public static partial class Program
         Stack<string> operatorStack = new Stack<string>();
         foreach (string token in tokens)
         {
-            if (decimal.TryParse(token, out _)) outputQueue.Enqueue(token);
+            if (double.TryParse(token, out _)) outputQueue.Enqueue(token);
             if (token == "(") operatorStack.Push(token);
 
             if (token == ")")
