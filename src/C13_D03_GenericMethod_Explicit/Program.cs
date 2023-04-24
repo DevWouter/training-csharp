@@ -3,10 +3,10 @@ double doubleValue = 1234.567d;
 float floatValue = 987.6543f;
 var stringValue = "Hello World!";
 
-Output.Write<double>(intValue);
-Output.Write<double>(floatValue);
+Output.Write<int>(intValue);
+Output.Write<float>(floatValue);
 Output.Write<double>(doubleValue);
-Output.Write(stringValue);
+Output.Write<string>(stringValue);
 
 public class Output
 {

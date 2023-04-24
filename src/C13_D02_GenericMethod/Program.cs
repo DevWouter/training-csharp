@@ -14,9 +14,4 @@ public class Output
     {
         Console.WriteLine($"Write({typeof(T).Name} value), \tvalue = {value}");
     }
-
-    public static void Write(string value)
-    {
-        Console.WriteLine($"Write(string value), \tvalue = {value}");
-    }
 }

@@ -6,8 +6,8 @@ float floatD = 4.0f;
 
 PrintAllVariables("Initial value");
 
-Swapper.Swap(ref intA, ref intB);
-Swapper.Swap(ref floatC, ref floatD);
+Swapper.Swap<int>(ref intA, ref intB);
+Swapper.Swap<float>(ref floatC, ref floatD);
 PrintAllVariables("After swapping both");
 
 // This won't work since inferred types are different

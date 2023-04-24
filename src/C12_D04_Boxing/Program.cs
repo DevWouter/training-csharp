@@ -23,19 +23,16 @@ Animal unboxedAnimal = (Animal)boxedAnimal;
 
 // And this is problematic, because we can cast any object to any type.
 boxedInt    = new Human();
-boxedString = new Human();
-boxedAnimal = new Human();
 
 // But the cool thing is, that we can always store any variable in a list of objects
 List<object> objects = new List<object>();
-objects.Add(unboxedInt);
-objects.Add(unboxedString);
-objects.Add(unboxedAnimal);
+objects.Add(boxedInt);      // Variable type: Object, actual type: Human
+objects.Add(unboxedAnimal); // Variable type: Animal, actual type: Animal
+objects.Add(boxedAnimal);   // Variable type: Object, actual type: Animal
 
 // The null literal is of a special "null-type", which modern dotnet tries to move away from.
 // So the next line might fail in future versions of dotnet (or if you turn on a specific compiler flag).
 objects.Add(null);
-
 
 public class Animal
 {

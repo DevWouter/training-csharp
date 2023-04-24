@@ -14,7 +14,7 @@ List<Cat> cats = new List<Cat>();
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // Option 1: Safe casting
-foreach (var animal in animals)
+foreach (Animal animal in animals)
 {
     Console.WriteLine("Attempting to add to the dogs list: " + animal);
 
@@ -30,17 +30,12 @@ foreach (var animal in animals)
         // And if it was, we can add it to the list.
         dogs.Add(possibleDog);
     }
-
-    if (animal is Cat)
-    {
-        cats.Add((Cat)animal);
-    }
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // Option 2: Type checking and unsafe casting
-foreach (var animal in animals)
+foreach (Animal animal in animals)
 {
     Console.WriteLine("Attempting to add to the cats list: " + animal);
 

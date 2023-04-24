@@ -1,20 +1,19 @@
-﻿Employee wouter = new Employee();
-wouter.Name = "Wouter";
+﻿FootballTeam team = new FootballTeam();
+team.Name = "Camas IT";
+team.Players.Add(new Keeper() { Name = "Wouter", IsPenaltyKiller = false });
+team.Players.Add(new FootballPlayer() { Name = "Rutger" });
+team.Players.Add(new FootballPlayer() { Name = "Joke" });
+team.Players.Add(new FootballPlayer() { Name = "Jan" });
 
-Manager rutger = new Manager();
-rutger.Name = "Rutger";
-rutger.Department = "IT";
+Console.WriteLine("Team: " + team);
 
-Console.WriteLine("[Wouter] " + wouter);
-Console.WriteLine("[Rutger] " + rutger);
-
-public class Employee
+public class FootballPlayer
 {
     public string Name { get; set; }
 
     // Override the default ToString() method, but we use a shorter syntax
     //                                ┌ Expression body syntax
-    public override string ToString() => $"Employee: {Name}";
+    public override string ToString() => $"Player: {Name}";
 }
 
 // ┌ Visibility
@@ -22,9 +21,20 @@ public class Employee
 // │   │     ┌ Name of type
 // │   │     │       ┌ inherit
 // │   │     │       │ ┌ Base class
-public class Manager : Employee
+public class Keeper : FootballPlayer
 {
-    public string Department { get; set; }
+    public bool IsPenaltyKiller { get; set; }
 
-    public override string ToString() => $"{Department} Manager: {Name}";
+    public override string ToString() => $"Keeper: {Name} (PenaltyKiller: {IsPenaltyKiller})";
+}
+
+public class FootballTeam
+{
+    public string Name { get; set; }
+
+    public List<FootballPlayer> Players { get; set; } = new();
+    public override string ToString()
+    {
+        return "Team " + Name;
+    }
 }

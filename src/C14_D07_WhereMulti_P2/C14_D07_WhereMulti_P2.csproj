@@ -5,5 +5,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace>C14_D08_WhereMulti_P2</RootNamespace>
     </PropertyGroup>
+
 </Project>
