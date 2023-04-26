@@ -1,9 +1,8 @@
-using System.Linq;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
-namespace Calculator;
+namespace MathEvaluator;
 
-public static partial class Program
+public static class Program
 {
     public static void Main(string[] args)
     {
@@ -16,8 +15,36 @@ public static partial class Program
         Console.WriteLine("Reverse polish notation:");
         Console.WriteLine(string.Join(",", rpn));
 
-        // double result = EvaluateRpn(rpn);
-        // Console.WriteLine(result);
+        double result = EvaluateRpn(rpn);
+        Console.WriteLine(result);
+    }
+
+    private static double EvaluateRpn(string[] tokens)
+    {
+        Stack<double> stack = new Stack<double>();
+        foreach (var token in tokens)
+        {
+            if (double.TryParse(token, out double number))
+            {
+                stack.Push(number);
+            }
+            else
+            {
+                double right = stack.Pop();
+                double left = stack.Pop();
+
+                switch (token)
+                {
+                    case "+": stack.Push(left + right); break;
+                    case "-": stack.Push(left - right); break;
+                    case "*": stack.Push(left * right); break;
+                    case "/": stack.Push(left / right); break;
+                    case "^": stack.Push(Math.Pow(left, right)); break;
+                }
+            }
+        }
+
+        return stack.Single();
     }
 
     private static string[] ToRpn(string[] tokens)
@@ -86,15 +113,15 @@ public static partial class Program
     }
 
 
-    
-    private static  Regex InfixMathExpression() => new Regex("" +
-                                                              "([0-9]+(?:\\.[0-9]+)?)" + // Numbers (including decimals)
-                                                              "|(\\+)" + // + operator
-                                                              "|(-)" + // - operator 
-                                                              "|(\\*)" + // * operator
-                                                              "|(\\/)" + // / operator
-                                                              "|(\\^)" + // ^ operator
-                                                              "|(\\()" + // Open parenthesis
-                                                              "|(\\))" // Close parenthesis
+    private static Regex InfixMathExpression() =>
+        new Regex("" +
+                  "([0-9]+(?:\\.[0-9]+)?)" + // Numbers
+                  "|(\\+)" +                 // + operator
+                  "|(-)" +                   // - operator 
+                  "|(\\*)" +                 // * operator
+                  "|(\\/)" +                 // / operator
+                  "|(\\^)" +                 // ^ operator
+                  "|(\\()" +                 // Open parenthesis
+                  "|(\\))"                   // Close parenthesis
         );
 }
