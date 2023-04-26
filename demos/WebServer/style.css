@@ -1,0 +1,9 @@
+﻿h1{
+    color: red;
+}
+
+output {
+    min-height: 1em;
+    border: 1px solid #ccc;
+    display: block;
+}
